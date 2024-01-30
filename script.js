@@ -8,6 +8,10 @@ bulbs.forEach((bulb) => {
   bulb.addEventListener("click", () => {
     bulb.classList.toggle("active");
     clickedCount++;
-    clicked.innerHTML = `You've clicked the lights ${clickedCount} times`;
+    if (clickedCount === 1) {
+      clicked.innerHTML = "You've clicked the lights 1 time";
+    } else {
+      clicked.innerHTML = `You've clicked the lights ${clickedCount} times`;
+    }
   });
 });
